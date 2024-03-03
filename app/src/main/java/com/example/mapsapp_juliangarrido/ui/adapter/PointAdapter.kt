@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mapsapp_juliangarrido.R
-import com.example.mapsapp_juliangarrido.model.Point
+import com.example.mapsapp_juliangarrido.model.entities.Point
 
 class PointAdapter(
     private val points: List<Point>,

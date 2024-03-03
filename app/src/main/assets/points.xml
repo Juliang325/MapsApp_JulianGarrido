@@ -1,0 +1,12 @@
+<points>
+    <point>
+        <nombre>Punto 1</nombre>
+        <latitud>10.0</latitud>
+        <longitud>20.0</longitud>
+    </point>
+    <point>
+        <nombre>Punto 2</nombre>
+        <latitud>15.0</latitud>
+        <longitud>25.0</longitud>
+    </point>
+</points>

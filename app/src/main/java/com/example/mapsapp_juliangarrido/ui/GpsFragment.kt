@@ -1,4 +1,4 @@
-package com.example.mapsapp_juliangarrido.ui.adapter
+package com.example.mapsapp_juliangarrido.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.mapsapp_juliangarrido.R
 
 
-class gpsFragment : Fragment() {
+class GpsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

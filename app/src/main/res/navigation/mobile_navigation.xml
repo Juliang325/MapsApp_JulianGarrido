@@ -16,7 +16,7 @@
         tools:layout="@layout/fragment_points" />
     <fragment
         android:id="@+id/gpsFragment"
-        android:name="com.example.mapsapp_juliangarrido.ui.adapter.gpsFragment"
-        android:label="fragment_gps"
-        tools:layout="@layout/fragment_gps" />
+        android:name="com.example.mapsapp_juliangarrido.ui.GpsFragment"
+        android:label="GpsFragment" />
+
 </navigation>

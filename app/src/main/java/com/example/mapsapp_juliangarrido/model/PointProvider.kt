@@ -1,5 +1,7 @@
 package com.example.mapsapp_juliangarrido.model
 
+import com.example.mapsapp_juliangarrido.model.entities.Point
+
 object PointProvider {
     val pointList = mutableListOf(
         Point("Point 1", 40.7128, -74.0060),
