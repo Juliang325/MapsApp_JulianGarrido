@@ -65,7 +65,6 @@ class MapsFragment : Fragment(), GoogleMap.OnMapClickListener {
             Log.d("MapFragment", "Latitud: ${latLng.latitude}, Longitud: ${latLng.longitude}, Nombre: $nombre")
             Log.d("MapFragment", "Lista de puntos: $points")
 
-            // Agregar el nuevo punto al SharedViewModel
             viewModel.addPoint(Point(nombre, latLng.latitude, latLng.longitude))
         }
 

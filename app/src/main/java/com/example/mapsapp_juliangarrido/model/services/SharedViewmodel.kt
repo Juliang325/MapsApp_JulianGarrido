@@ -3,12 +3,8 @@ package com.example.mapsapp_juliangarrido.model.services
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.example.mapsapp_juliangarrido.model.entities.Point
-import com.example.mapsapp_juliangarrido.model.PointProvider
 import com.example.mapsapp_juliangarrido.model.daos.DaoSimpleXML
-import kotlinx.coroutines.launch
 
 class SharedViewmodel(application: Application) : AndroidViewModel(application) {
     var puntoMutableList = MutableLiveData<MutableList<Point>>()
