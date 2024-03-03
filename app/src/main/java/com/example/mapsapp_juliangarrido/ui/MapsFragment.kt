@@ -1,5 +1,6 @@
 package com.example.mapsapp_juliangarrido.ui
 
+import android.location.Location
 import androidx.fragment.app.Fragment
 
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.activityViewModels
 import com.example.mapsapp_juliangarrido.R
@@ -66,6 +68,14 @@ class MapsFragment : Fragment(), GoogleMap.OnMapClickListener {
             Log.d("MapFragment", "Lista de puntos: $points")
 
             viewModel.addPoint(Point(nombre, latLng.latitude, latLng.longitude))
+
+            // Calcular la distancia si hay al menos dos puntos en la lista
+            if (points.size >= 2) {
+                val distance = calculateDistance(points[points.size - 2], points[points.size - 1])
+                val distanceInKm = distance / 1000 // Convertir la distancia a kilómetros
+                val message = "Distancia entre los dos últimos puntos: %.2f km".format(distanceInKm)
+                Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
+            }
         }
 
         dialog.setNegativeButton("Cancelar") { dialog, _ ->
@@ -73,5 +83,11 @@ class MapsFragment : Fragment(), GoogleMap.OnMapClickListener {
         }
 
         dialog.show()
+    }
+
+    private fun calculateDistance(start: LatLng, end: LatLng): Float {
+        val results = FloatArray(1)
+        Location.distanceBetween(start.latitude, start.longitude, end.latitude, end.longitude, results)
+        return results[0]
     }
 }
